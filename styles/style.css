@@ -22,19 +22,24 @@ h1{
 }
 
 div#squareGrid{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     max-width: 960px;
     max-height: 960px;
-    justify-content: center;
-    grid-template-columns: repeat(16, 16px);
-    grid-template-rows: repeat(16, 16px);
-    row-gap: 0px;
-    column-gap: 0px;
 }
 
 .gameGrids{
-    display: flex;
     width: 16px;
     height: 16px;
     background-color: #ffffff;
+}
+
+button{
+    display: flex;
+    background-color: #0e0e0e;
+    justify-self: center;
+    padding: 8px 16px;
+    margin: 16px;
+    border: solid 1px;
+    border-radius: 10px;
 }
