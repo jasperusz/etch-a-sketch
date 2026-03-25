@@ -23,17 +23,17 @@ h1{
 
 div#squareGrid{
     display: grid;
-    width: 960px;
-    height: 960px;
+    max-width: 960px;
+    max-height: 960px;
     justify-content: center;
-    align-items: center;
-    justify-items: center;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 16px);
+    grid-template-rows: repeat(16, 16px);
+    row-gap: 0px;
+    column-gap: 0px;
 }
 
 .gameGrids{
-    display: flexbox;
+    display: flex;
     width: 16px;
     height: 16px;
     background-color: #ffffff;
