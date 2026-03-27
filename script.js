@@ -8,7 +8,8 @@ function newDiv() {
     const createdDiv = document.createElement('div');
     createdDiv.className = 'gameGrids';
     dadDiv.appendChild(createdDiv);
-
+    createdDiv.style.width = `${squareSize}px`;
+    createdDiv.style.height = `${squareSize}px`;
     // Evento de mudança de cores.
     createdDiv.addEventListener('mouseover', function () {
             this.style.backgroundColor = '#000000'
@@ -17,7 +18,7 @@ function newDiv() {
 
 // Função que define o tamanho do grid
 function baseGridQuantity() {
-    gridQuantity = 256 - 1;
+    gridQuantity = 256;
     for (let i = 1; i <= gridQuantity; i++) {
         newDiv();
     };
@@ -39,9 +40,6 @@ function changeGridSize() {
         const removeGrid = document.getElementById('squareGrid').innerHTML = ""
         gridQuantity = userPrompt * userPrompt;
         squareSize = 960 / userPrompt;
-        dadDiv.style.gridTemplateColumns = `repeat(${userPrompt}, ${userPrompt}px)`;
-        divToChange[i].style.height = `${userPrompt}px`
-        divToChange[i].style.width = `${userPrompt}px`
         for (let i = 1; i <= gridQuantity; i++) {
             newDiv();
 
